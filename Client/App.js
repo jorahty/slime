@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Text, SafeAreaView } from 'react-native';
+import Constants from 'expo-constants';
 import io from 'socket.io-client';
 
-const socketEndpoint = "http://192.168.0.149:3000";
-// const socketEndpoint = "https://replit-socketio-expo.jorahty.repl.co";
+const socketEndpoint = Constants.expoConfig.extra.socketEndpoint;
 
 export default function App() {
   const [rand, setRand] = useState(0);
@@ -27,14 +27,17 @@ export default function App() {
       socket.disconnect();
       socket.removeAllListeners();
     };
-  }, [])
+  }, []);
 
   return (
-    <SafeAreaView>
-      <Text>
+    <SafeAreaView style={{ width: '100%', backgroundColor: '#000' }}>
+      <Text style={{ color: '#fff' }}>
+        socketEndpoint: {socketEndpoint}
+      </Text>
+      <Text style={{ color: '#fff' }}>
         rand: {rand}
       </Text>
-      <Text>
+      <Text style={{ color: '#fff' }}>
         {error ? `error: ${error}` : ''}
       </Text>
     </SafeAreaView>
