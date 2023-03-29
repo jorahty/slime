@@ -16,8 +16,8 @@ using the IP address of my machine (which I get with `ipconfig getifaddr en0`)
 e.g `http://172.19.248.44:3000`.
 
 - Install node packages: `npm install`
-- Start the server: `cd Server && npm start`
-- Start the client: `cd Client && npm start`
+- Start the server: `npm run start:server`
+- Start the client: `npm run start:client`
 
 ## Todo
 
