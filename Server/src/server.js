@@ -16,8 +16,12 @@ httpServer.listen(port, () => {
 
 let count = 0;
 
+let likes = 42;
+
 io.on('connect', (socket) => {
   console.log(`total: ${++count}, connect: ${socket.id}`);
+
+  socket.on('like', () => likes++);
 
   socket.on('disconnect', () => {
     console.log(`total: ${--count}, disconnect: ${socket.id}`);
@@ -25,5 +29,5 @@ io.on('connect', (socket) => {
 });
 
 setInterval(() => {
-  io.volatile.emit('update', Math.random());
+  io.volatile.emit('update', Math.random(), likes);
 }, 1000 / 60);

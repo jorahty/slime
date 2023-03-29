@@ -20,13 +20,9 @@ socket endpoint to `http://localhost:3000` or to the IP address of my machine
 
 ## Todo
 
-<!-- - try using socket.js, but make sure it's torn down properly 
-- `socket` can't be simply exported as a top-level constant because it needs to
-  be torn down on unmount. Instead, it needs to be created and destroyed in a
-  `useEffect`. Since it needs to be used by several compoenents, both for
-  rendering and sending input, it needs to be provided via a global context provider.
-- Setup `AppContextProvider` and `useAppContext` -->
-- Assert that socket can be used by distant components
+- Refresh your memory about how things are working, Assert that socket can be used by distant components
+- Setup git repo, Assert that deployment to replit works, Make template, Get a stable, production feeling github workflow thing going
+- read from .env instead of environment
 - Start drawing shapes on the Client
 - Setup Matter.js on the Server
 - Start rendering state from Matter.js world on Server
