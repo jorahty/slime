@@ -26,3 +26,5 @@ socket endpoint to `http://localhost:3000` or to the IP address of my machine
 - Start drawing shapes on the Client
 - Setup Matter.js on the Server
 - Start rendering state from Matter.js world on Server
+- eslint
+- basic tests — start very basic. just something that proves everything isn't entirely broken and has some code coverage

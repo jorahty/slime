@@ -19,12 +19,15 @@ let count = 0;
 let likes = 42;
 
 io.on('connect', (socket) => {
-  console.log(`total: ${++count}, connect: ${socket.id}`);
+  const colorIndex = socket.id.charCodeAt(0) % 7;
+  const formatString = `\x1b[3${colorIndex}m%s\x1b[0m`;
+
+  console.log(formatString, `total: ${++count}, connect: ${socket.id}`);
 
   socket.on('like', () => likes++);
 
   socket.on('disconnect', () => {
-    console.log(`total: ${--count}, disconnect: ${socket.id}`);
+    console.log(formatString, `total: ${--count}, disconnect: ${socket.id}`);
   });
 });
 
