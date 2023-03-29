@@ -22,9 +22,11 @@ e.g `http://172.19.248.44:3000`.
 ## Todo
 
 - Setup git repo, Assert that deployment to replit works, Make template, Get a stable, production feeling github workflow thing going
-- read from .env instead of environment
+- Check performance on replit
 - Start drawing shapes on the Client
 - Setup Matter.js on the Server
 - Start rendering state from Matter.js world on Server
 - eslint
 - basic tests — start very basic. just something that proves everything isn't entirely broken and has some code coverage
+- github workflow checks
+- render table of connected users to server terminal output
