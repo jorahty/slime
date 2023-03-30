@@ -1,7 +1,11 @@
 import { View, Button } from "react-native";
 import { socket } from "../socket";
 
-export default function LikeButton({ likes }) {
+interface Props {
+  likes: number;
+}
+
+export default function LikeButton({ likes }: Props) {
   return (
     <View>
       <Button

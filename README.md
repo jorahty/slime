@@ -22,6 +22,21 @@ This project has two parts that communicate using Socket.io:
 
 ## Todo
 
+- draw something locally
+- draw something from the server
+
+
+end goal:
+low latency networked dial with expo client
+perfect controls
+multiple clients experiencing the same physics
+
+straight to the point:
+networked dial? reuse code
+square canvas component that renders updates as frames
+controls component that uses the input snack and emits input signals
+
+
 - Setup git repo, Assert that deployment to replit works, Make template, Get a stable, production feeling github workflow thing going
 - Check performance on replit
 - Start drawing shapes on the Client
